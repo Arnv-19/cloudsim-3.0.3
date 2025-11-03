@@ -26,7 +26,9 @@ public class ScenarioLoader {
         List<Vm> vms = new ArrayList<>();
         String vmm = "Xen";
         
-        List<Map<String, Object>> vmConfigs = (List<Map<String, Object>>) scenarioConfig.get("vm_configurations");
+        List<Map<String, Object>> list2 = (List<Map<String, Object>>) scenarioConfig.get("vm_configurations");
+		List<Map<String, Object>> list = list2;
+		List<Map<String, Object>> vmConfigs = list;
         int vmId = 0;
         
         for (Map<String, Object> vmConf : vmConfigs) {

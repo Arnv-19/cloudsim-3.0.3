@@ -77,9 +77,9 @@ public class AdaptiveZoneSimulation {
         // Parse scenario config
         Gson gson = new Gson();
         Map<String, Object> scenarioConfig = gson.fromJson(new FileReader(scenarioConfigPath), new TypeToken<Map<String, Object>>(){}.getType());
-        Map<String, Object> simParams = (Map<String, Object>) scenarioConfig.get("simulation_parameters");
+        Map<String, Object> map = (Map<String, Object>) scenarioConfig.get("simulation_parameters");
+		Map<String, Object> simParams = map;
         int numHosts = ((Double)simParams.get("number_of_hosts")).intValue();
-        int numVMs = ((Double)simParams.get("number_of_vms")).intValue();
         int numCloudlets = ((Double)simParams.get("number_of_cloudlets")).intValue();
         int simTime = ((Double)simParams.get("simulation_time")).intValue();
 

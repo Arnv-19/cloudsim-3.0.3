@@ -1,6 +1,8 @@
 package org.cloudsim.adaptive.zone.core;
 
 import java.util.ArrayList;
+
+import org.cloudbus.cloudsim.Host;
 import org.cloudbus.cloudsim.Log;
 import java.util.HashMap;
 import java.util.List;
@@ -227,7 +229,7 @@ public class ZoneManager {
         vmToZoneMapping.put(vm.getId(), targetZoneId);
 
         // Update migration count
-        zoneMetrics.get(targetZoneId).incrementMigrationCount();
+        zoneMetrics.get(targetZoneId).getMigrationCount();
         Log.printLine("VM " + vm.getId() + " migrated from Zone " + currentZoneId + " to Zone " + targetZoneId + " and Host " + bestHost.getId());
         return true;
     }
