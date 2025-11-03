@@ -1,0 +1,5 @@
+algorithm,total_placements,migration_count,placement_success_rate,successful_placements,failed_placements
+First Fit,20,0,0.85,17,3
+Best Fit,20,0,0.85,17,3
+Round Robin,20,0,0.85,17,3
+Adaptive Zone Placement,20,0,0.6,12,8
